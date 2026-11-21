@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B4 — Brand Identity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Thin transparent top bar -->
+  <header class="top-bar">
+    <span class="top-bar__name">B4</span>
+    <button class="top-bar__top-btn" id="backToTop" aria-label="Back to top">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 13V3M8 3L3 8M8 3l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Gallery container — populated by script.js -->
+  <main class="container" id="gallery"></main>
+
+  <!-- Lightbox overlay -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox__close" id="lbClose" aria-label="Close lightbox">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <button class="lightbox__prev" id="lbPrev" aria-label="Previous image">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <button class="lightbox__next" id="lbNext" aria-label="Next image">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+        <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <div class="lightbox__content" id="lbContent">
+      <img class="lightbox__img" id="lbImg" src="" alt="" draggable="false">
+    </div>
+    <div class="lightbox__counter" id="lbCounter"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
